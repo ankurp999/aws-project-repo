@@ -1,0 +1,403 @@
+/* General Body & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header */
+.main-header {
+    background: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.site-title:hover {
+    color: #34495e;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 25px;
+}
+
+.main-header nav ul li a {
+    font-weight: 600;
+    color: #555;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.main-header nav ul li a:hover::after,
+.main-header nav ul li a.active::after {
+    width: 100%;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out; /* Animation on load */
+}
+
+.hero-title {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* For anchor tags styled as buttons */
+    display: inline-block; /* For anchor tags styled as buttons */
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Blog Posts Section */
+.blog-posts-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.blog-posts-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-title {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    display: block; /* Make the whole title clickable */
+}
+
+.post-title:hover {
+    color: #3498db;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.post-excerpt {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-weight: 600;
+    color: #3498db;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.view-all-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* About and Contact Sections */
+.about-section, .contact-section {
+    padding: 60px 0;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.about-section p, .contact-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fefefe;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+.main-footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.main-footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+.main-footer .social-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-post {
+    opacity: 0; /* Initially hidden for JS animation */
+    transform: translateY(20px); /* Slightly down */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.blog-post.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-header nav ul li {
+        margin: 0 10px 10px 10px;
+    }
+
+    .site-title {
+        font-size: 1.8em;
+    }
+
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .blog-post {
+        margin: 0 auto; /* Center single column posts */
+        max-width: 400px;
+    }
+
+    .blog-posts-section, .about-section, .contact-section {
+        padding: 40px 0;
+        margin-top: 20px;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header nav ul li {
+        margin: 0 8px 8px 8px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .blog-posts-section h2, .about-section h2, .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .post-title {
+        font-size: 1.4em;
+    }
+}
