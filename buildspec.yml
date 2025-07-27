@@ -3,10 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies (if any)...
+      - echo "Installing dependencies (none needed for static site)"
   build:
     commands:
-      - echo Building the static site...
+      - echo "Zipping static files for Elastic Beanstalk..."
+      - zip -r output.zip index.html style.css script.js
+
 artifacts:
   files:
-    - '**/*'
+    - output.zip
